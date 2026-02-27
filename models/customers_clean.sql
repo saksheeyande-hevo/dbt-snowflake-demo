@@ -1,11 +1,7 @@
-{{ config(
-    materialized='view'
-) }}
-
 SELECT
     ID,
     NAME,
     EMAIL,
-    CITY
-FROM {{ ref('customers_raw') }}
-WHERE NAME IS NOT NULL
+    CITY,
+    UPPER(CITY) AS CITY_UPPER
+FROM SAKSHEE_DB.PUBLIC.CUSTOMERS_RAW
