@@ -7,5 +7,5 @@ SELECT
     NAME,
     EMAIL,
     CITY
-FROM {{ ref('customers') }}
+FROM {{ ref('customers_raw') }}
 WHERE NAME IS NOT NULL
