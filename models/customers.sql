@@ -1,1 +1,6 @@
+{{ config(
+    materialized='table',
+    pre_hook="INSERT INTO DBT_AUDIT_LOG (MODEL_NAME, RUN_TIME) VALUES ('customers_model', CURRENT_TIMESTAMP)"
+) }}
+
 SELECT * FROM SAKSHEE_DB.PUBLIC.CUSTOMERS_RAW
