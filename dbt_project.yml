@@ -1,0 +1,11 @@
+name: 'dbt_snowflake_demo'
+version: '1.0'
+config-version: 2
+
+profile: 'default'
+
+model-paths: ["models"]
+
+models:
+  dbt_snowflake_demo:
+    materialized: table
