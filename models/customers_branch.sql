@@ -1,0 +1,8 @@
+SELECT
+    ID,
+    NAME,
+    EMAIL,
+    CITY,
+    LOWER(NAME) AS name_lower,
+    CURRENT_TIMESTAMP AS branch_run_time
+FROM SAKSHEE_DB.PUBLIC.CUSTOMERS_RAW
